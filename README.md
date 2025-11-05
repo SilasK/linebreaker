@@ -1,5 +1,10 @@
+
+
 # Linebreaker
 
+I created this tool because I couldn't find a reliable line breaking utility that works with Quarto markdown without altering headers, lists, or other formatting. This tool is conservative - it preserves your document structure and only adds line breaks when both the preceding and following text segments are sufficiently long.
+
+## Features
 Intelligent line breaking for Markdown and text files, with support for:
 - Citations in format `[@...]`
 - Decimal numbers
@@ -12,8 +17,13 @@ Intelligent line breaking for Markdown and text files, with support for:
 
 Install from PyPI using pixi:
 
+
 ```bash
-pixi add linebreaker
+pip install linebreaker
+```
+
+```bash
+pixi add --pypi linebreaker
 ```
 
 Or install from source:
@@ -26,18 +36,22 @@ pixi install
 
 ## Usage
 
+
+
 ### As a command-line tool:
 
 ```bash
 # Process a single file
-linebreaker your_file.qmd
+linebreaker your_file.md
 
 # Process a directory
 linebreaker writing/
 
 # For compatibility, you can still use the old script
-python -m linebreaker.cli your_file.qmd
+python -m linebreaker.cli your_file.md
 ```
+> **⚠️ Important**: Only use this tool on files that are tracked by a version control system like Git. Line breaking modifies your files, and having version control ensures you can review and revert changes if needed.
+
 
 ### As a module:
 
@@ -56,12 +70,6 @@ result = break_text(full_text)
 ```bash
 # Run all tests
 pytest linebreaker/tests/
-
-# Run with verbose output
-pytest linebreaker/tests/ -v
-
-# Run specific test file
-pytest linebreaker/tests/test_core.py -v
 ```
 
 ## Project Structure
