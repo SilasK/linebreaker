@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=61.0", "wheel", "versioneer[toml]"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "linebreaker"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Intelligent line breaking for Markdown and text files"
 readme = "README.md"
 license = "MIT"
@@ -53,11 +53,13 @@ exclude = ["tests*"]
 [tool.setuptools.package-data]
 linebreaker = ["py.typed"]  # If you add type stubs later
 
-[tool.pytest.ini_options]
-testpaths = ["src/linebreaker/tests"]
-python_files = "test_*.py"
-python_classes = "Test*"
-python_functions = "test_*"
+[tool.versioneer]
+VCS = "git"
+style = "pep440"
+versionfile_source = "src/linebreaker/_version.py"
+versionfile_build = "linebreaker/_version.py"
+tag_prefix = ""
+parentdir_prefix = "linebreaker-"
 [tool.pixi.workspace]
 channels = ["conda-forge", "bioconda"]
 platforms = ["osx-arm64", "linux-64", "win-64"]

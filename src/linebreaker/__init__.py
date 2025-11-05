@@ -1,7 +1,5 @@
 """Line breaker module for formatting text with intelligent line breaks."""
 
-__version__ = "0.1.0"
-
 from .core import (
     mask_citations_and_numbers,
     restore_masked_content,
@@ -31,3 +29,6 @@ __all__ = [
     "break_text",
     "process_file",
 ]
+
+from . import _version
+__version__ = _version.get_versions()['version']
