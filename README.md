@@ -68,12 +68,17 @@ pytest linebreaker/tests/test_core.py -v
 
 ```
 linebreaker/
-├── __init__.py          # Package exports
-├── core.py              # Core line breaking logic
-├── cli.py               # Command-line interface
-└── tests/
-    ├── __init__.py
-    └── test_core.py     # Test suite
+├── src/
+│   └── linebreaker/
+│       ├── __init__.py          # Package exports
+│       ├── core.py              # Core line breaking logic
+│       ├── cli.py               # Command-line interface
+│       └── tests/
+│           ├── __init__.py
+│           └── test_core.py     # Test suite
+├── pyproject.toml               # Package configuration
+├── LICENSE                      # MIT License
+└── README.md                    # This file
 ```
 
 ## Features
