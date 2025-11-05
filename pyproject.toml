@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linebreaker"
+version = "0.1.0"
+description = "Intelligent line breaking for Markdown and text files"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [
+    {name = "Silas", email = "silas@example.com"},  # Replace with actual author info
+]
+maintainers = [
+    {name = "Silas", email = "silas@example.com"},
+]
+keywords = ["markdown", "text", "line-breaking", "formatting"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+]
+
+[project.urls]
+Homepage = "https://github.com/silas/linebreaker"  # Replace with actual repo
+Repository = "https://github.com/silas/linebreaker"
+Issues = "https://github.com/silas/linebreaker/issues"
+Changelog = "https://github.com/silas/linebreaker/blob/main/CHANGELOG.md"
+
+[project.scripts]
+linebreaker = "linebreaker.cli:main"
+
+[tool.setuptools]
+packages = ["linebreaker"]
+
+[tool.setuptools.package-data]
+linebreaker = ["py.typed"]  # If you add type stubs later
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+[tool.pixi.workspace]
+channels = ["conda-forge", "bioconda"]
+platforms = ["osx-arm64"]
+
+[tool.pixi.pypi-dependencies]
+linebreaker = { path = ".", editable = true }
+
+[tool.pixi.environments]
+default = { solve-group = "default" }
+dev = { features = ["dev"], solve-group = "default" }
+
+[tool.pixi.tasks]
