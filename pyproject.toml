@@ -67,6 +67,7 @@ platforms = ["osx-arm64", "linux-64", "win-64"]
 
 [tool.pixi.pypi-dependencies]
 linebreaker = { path = ".", editable = true }
+build = "*"
 
 [tool.pixi.environments]
 default = { solve-group = "default" }
