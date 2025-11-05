@@ -37,7 +37,6 @@ pixi install
 ## Usage
 
 
-
 ### As a command-line tool:
 
 ```bash
@@ -72,24 +71,9 @@ result = break_text(full_text)
 pytest linebreaker/tests/
 ```
 
-## Project Structure
 
-```
-linebreaker/
-├── src/
-│   └── linebreaker/
-│       ├── __init__.py          # Package exports
-│       ├── core.py              # Core line breaking logic
-│       ├── cli.py               # Command-line interface
-│       └── tests/
-│           ├── __init__.py
-│           └── test_core.py     # Test suite
-├── pyproject.toml               # Package configuration
-├── LICENSE                      # MIT License
-└── README.md                    # This file
-```
 
-## Features
+## Detailed Features
 
 ### Hard Breaks (Sentence Boundaries)
 - Splits on `.`, `?`, `!` when both before and after have 20+ characters
