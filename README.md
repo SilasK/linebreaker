@@ -67,7 +67,10 @@ result = break_text(full_text)
 ## Running Tests
 
 ```bash
-# Run all tests
+# Run all tests using pixi (recommended)
+pixi run --environment dev pytest
+
+# Or run directly with pytest
 pytest linebreaker/tests/
 ```
 

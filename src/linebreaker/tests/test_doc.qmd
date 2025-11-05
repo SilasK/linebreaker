@@ -1,0 +1,23 @@
+---
+title: Comprehensive Test Document
+---
+
+This is a normal sentence with enough characters to potentially trigger line breaks. It includes citations [@https://doi.org/10.1038/example] and numbers like 0.85 and 3.14.
+
+The _gut_ microbiome has been shown to be strongly altered in CRC, with fecal metagenomes predictive of established CRC (AUC 0.85) [@https://doi.org/10.1038/s41591-025-03693-9]. However, fecal-based approaches show highly inconsistent performance for adenoma detection: a systematic review of microbiome-derived biomarkers (mostly 16S rDNA sequencing) found diagnostic AUCs ranging from 0.28-0.89 with high variability across studies [@https://doi.org/10.1016/j.neo.2022.100868].
+
+This sentence has an em dash — which should cause a line break in long text, and continues with more content to make it sufficiently long for the breaking algorithm to consider it.
+
+However, fecal-based approaches show highly inconsistent performance: a systematic review found diagnostic values ranging from 0.28 to 0.89.
+
+They rely exclusively on 16S rRNA amplicon sequencing, which: (1) provides only genus- or species-level resolution, (2) systematically misses Patescibacteria—the most prevalent phylum in the oral cavity, and (3) cannot resolve subspecies-level variation known to be functionally critical.
+
+::: {.callout-note}
+This is inside a Quarto block: it should not be formatted at all even if very long and contains citations [@block-citation] or numbers like 1.23.
+:::
+
+More normal text after the block with abbreviations like Dr. Smith and Prof. Johnson that should not trigger breaks.
+
+A comparison of method A vs. method B with et al. references and i.e. examples that should not break inappropriately.
+
+This is a very long sentence with some information in parentheses (like this information here that makes it longer) and then more text continues after the parentheses for quite a while to make it over one hundred characters and test the parentheses breaking logic.
