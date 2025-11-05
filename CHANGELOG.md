@@ -5,9 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2025-11-05
+## [1.0.1] - 2025-11-05
 
 ### Added
+- **Versioneer integration** - Automatic versioning from git tags
+- **Cross-platform support** - Linux, Windows, and macOS compatibility
+- **Improved CI/CD** - Enhanced GitHub Actions workflows with pixi
+
+### Changed
+- **Build system** - Migrated to dynamic versioning with versioneer
+- **Platform support** - Extended from macOS-only to multi-platform
+
+### Technical
+- Added `versioneer[toml]` to build requirements
+- Configured automatic version detection from `v*` git tags
+- Updated pixi configuration for cross-platform development
 - **Initial release** of Linebreaker - intelligent line breaking for Markdown and text files
 - **Command-line interface** (`linebreaker` command) for processing files and directories
 - **Python API** with `format_line()` and `break_text()` functions
